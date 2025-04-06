@@ -1,0 +1,47 @@
+﻿@model WhiteLagoon.Domain.Entities.Villa
+
+<div class="card offset-3 w-50 w-lg-25 w-md-35 p-2 border-0">
+	<div class="card-header bg-danger bg-gradient text-center p-2">
+		<h2>Delete</h2>
+	</div>
+	<div class="card-body border p-5">
+		<form method="post" enctype="multipart/form-data">
+			<input asp-for="Id" hidden />
+			<div class="form-floating py-1">
+				<input asp-for="Name" disabled class="form-control " />
+				<label asp-for="Name" class="ms-2"></label>
+				<span asp-validation-for="Name" class="text-danger"></span>
+				</div>
+			<div class=" form-floating py-1">
+
+				<input asp-for="Description" disabled class="form-control " />
+				<label asp-for="Description" class="ms-2"></label>
+				<span asp-validation-for="Description" class="text-danger"></span>
+
+			</div>
+				<div class="py-1 form-floating">
+					<input asp-for="Price" disabled class="form-control" />
+					<label asp-for="Price" class="ms-2"></label>
+					<span asp-validation-for="Price" class="text-danger"></span>
+				</div>
+				<div class=" py-1 form-floating">
+					<input asp-for="Occupancy" disabled class="form-control" />
+					<label asp-for="Occupancy" class="ms-2"></label>
+					<span asp-validation-for="Occupancy" class="text-danger"></span>
+			</div>
+			<div class="form-floating py-1">
+				<input asp-for="Sqft" disabled class="form-control" />
+				<label asp-for="Sqft" class="ms-2"></label>
+			</div>
+
+			<div class="text-center pt-3">
+				<button type="submit" class="btn btn-danger w-25" style="min-width: 120px;">
+					<i class="bi bi-trash-fill "></i> Delete
+				</button>
+				<a asp-controller="Villa" asp-action="Index" class="btn btn-primary w-25" style="min-width: 120px;">
+				<i class="bi bi-x-circle"></i> Cancel
+				</a>
+			</div>
+		</form>
+	</div>
+</div>

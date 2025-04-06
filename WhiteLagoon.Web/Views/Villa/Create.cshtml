@@ -1,0 +1,54 @@
+﻿@model WhiteLagoon.Domain.Entities.Villa
+
+	<div class="w-50 w-md-35 w-lg-25 offset-3  card border-0 p-2">
+	<div class="card-header bg-primary bg-gradient p-2 text-center">
+		<h4>Add Villa</h4>
+	</div>
+	<div class="card-body border p-5">
+		<form method="post" class="row" enctype="multipart/form-data">
+			<div class="p-4">
+			<div class="form-floating py-1">
+						<input asp-for="Name" class="form-control border" />
+				<label asp-for="Name" class="ms-2 "></label>
+				<span asp-validation-for="Name"></span>
+			</div>
+				<div class="form-floating py-1">
+					<input asp-for="Description" class="form-control border" />
+					<label asp-for="Description" class="ms-2 "></label>
+					<span asp-validation-for="Description"></span>
+				</div>
+				<div class="form-floating py-1">
+					<input asp-for="Price" class="form-control border" />
+					<label asp-for="Price" class="ms-2 "></label>
+					<span asp-validation-for="Price"></span>
+				</div>
+				<div class="form-floating py-1">
+					<input asp-for="Occupancy" class="form-control border" />
+					<label asp-for="Occupancy" class="ms-2 "></label>
+					<span asp-validation-for="Occupancy" class="text-danger"></span>
+				</div>
+				<div class="form-floating py-1">
+					<input asp-for="Sqft" class="form-control border" />
+					<label asp-for="Sqft" class="ms-2 "></label>
+					<span asp-validation-for="Sqft"></span>
+				</div>
+				<div class="form-floating py-1">
+					<input asp-for="ImageUrl" class="form-control border" />
+					<label asp-for="ImageUrl" class="ms-2 "></label>
+					<span asp-validation-for="ImageUrl"></span>
+				</div>
+				
+				<div class="text-center pt-3">
+						<button type="submit" class="btn btn-success w-25 " style="min-width: 120px;">
+						<i class="bi bi-check-circle"></i> Create
+					</button>
+						<a asp-for="Villa" asp-action="index" class="btn btn-danger w-25" style="min-width: 120px;">
+						<i class="bi bi-x-circle"></i> Cancel
+
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
